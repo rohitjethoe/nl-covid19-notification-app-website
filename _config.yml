@@ -9,7 +9,10 @@ collections:
     permalink: /:categories/:name/
 
 sass:
-  sass_dir: css
+  load_paths:
+    - css
+    - css-arabic
+    
 
 exclude:
   - vendor 

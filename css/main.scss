@@ -22,18 +22,6 @@ $color-WARN_rood: #CA005D;
 
 $color-focus: #008fcd;
 $color-focus-background: rgba($color-RO_donkerblauw--interaction, 0.1);
-
-// DO NOT COMMIT, for testing line-height, spacing issues
-* { 
-    line-height: 1.5 !important;
-    letter-spacing: 0.12em !important;
-    word-spacing: 0.16em !important;
-}
-
-p {
-    margin-bottom: 2em !important;
-}
-// END DO NOT COMMIT BLOCK
     
 :root {
     --transition-in: 262ms ease;
@@ -99,6 +87,10 @@ html {
             overflow-y: scroll; // Prevent scrollbar jitter
         }
     }
+
+    &[ar] {
+        direction: rtl;
+    }
 }
 
 body {
@@ -139,7 +131,7 @@ a, a:visited {
 }
 
 a:hover {
-    color: #002783 /* RO donker link2 */;
+    color: $color-RO_donkerblauw--interaction;
     text-decoration: underline;
 }
 
@@ -170,7 +162,7 @@ a:hover {
         border: none;
         border-radius: 0;
         color: #fff;
-        background-color: #002783;
+        background-color: $color-RO_donkerblauw--interaction;
         position: absolute;
         top: -100vh;
         left: -100vw;
@@ -470,7 +462,7 @@ header .watch > a:hover {
 
 .statements details > summary > div.expand,
 .statements details > summary > .collapse.bottom {
-    color: #154273 /* RO blauw */;
+    color: $color-RO_donkerblauw;
     border-top: 1px solid rgba(21, 66, 115, 0.2) /* RO blauw */;
     position: absolute;
     left: 0;
@@ -636,7 +628,7 @@ header .watch > a:hover {
 .timeline > h3.working-on::after,
 .timeline > ul.working-on > li::before,
 .timeline > ul.working-on > li::after {
-   border-color: #154273 /* RO blauw */;
+   border-color: $color-RO_donkerblauw;
 }
 
 .timeline > ul.completed > li,
@@ -766,7 +758,7 @@ a.explainer > h2 {
     margin-top: -6rem;
 }
 .faq > label {
-    color: #154273 /* RO blauw */;
+    color: $color-RO_donkerblauw;
     cursor: pointer;
     display: block;
     float: left;
